@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distance Learning – Student Management</title>
+    <meta name="description" content="Distance Learning Student Management dashboard with working navigation and functional modules." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="landing-hero">
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <div class="hero-brand">
+            <div class="brand-mark">🎓</div>
+            <div class="brand-copy-lg">
+              <span class="brand-top">TUPI LEARNING HUB</span>
+              <small>South Cotabato Student Network</small>
+            </div>
+          </div>
+
+          <div class="eyebrow">CONNECTED EDUCATION</div>
+          <h1>Learn from Tupi, stay connected wherever you are.</h1>
+          <p>
+            Sign in to access your learning workspace. When you choose to share your location, the school can see
+            your latest check-in on the Tupi student map.
+          </p>
+
+          <div class="meta-pills">
+            <span>📍 Tupi, South Cotabato</span>
+            <span>🔒 Secure account access</span>
+          </div>
+        </div>
+
+        <div class="login-card-wrap">
+          <div class="login-card">
+            <h2>Welcome back</h2>
+            <p>Sign in to continue to your learning hub.</p>
+
+            <form id="signin-form">
+              <div class="field-group">
+                <label>EMAIL</label>
+                <div class="input-row">
+                  <span>✉</span>
+                  <input type="email" value="you@example.com" aria-label="Email" />
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label>PASSWORD</label>
+                <div class="input-row">
+                  <span>🔒</span>
+                  <input type="password" value="At least 6 characters" aria-label="Password" />
+                  <span class="eye">◉</span>
+                </div>
+              </div>
+
+              <button class="login-btn" type="submit">Sign in</button>
+            </form>
+
+            <div class="signup-link">
+              New to the learning hub? <a href="#">Create an account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-icon">🎓</div>
+          <div class="brand-copy">
+            <strong>Distance Learning</strong>
+            <span>Student Management</span>
+          </div>
+        </div>
+
+        <div class="menu-panel">
+          <p class="menu-title">MENU</p>
+          <nav class="nav-list" aria-label="Sidebar Navigation">
+            <button id="home-dashboard-btn" class="nav-item home-item" type="button">
+              <span class="nav-icon">⌂</span>
+              <span>Home</span>
+            </button>
+            <button class="nav-item active" data-page="dashboard" type="button">
+              <span class="nav-icon">▦</span>
+              <span>Dashboard</span>
+              <em class="nav-dot"></em>
+            </button>
+            <button class="nav-item" data-page="students" type="button">
+              <span class="nav-icon">◌</span>
+              <span>Students</span>
+            </button>
+            <button class="nav-item" data-page="courses" type="button">
+              <span class="nav-icon">▣</span>
+              <span>Courses</span>
+            </button>
+            <button class="nav-item" data-page="enrollments" type="button">
+              <span class="nav-icon">◫</span>
+              <span>Enrollments</span>
+            </button>
+            <button class="nav-item" data-page="assignments" type="button">
+              <span class="nav-icon">◍</span>
+              <span>Assignments</span>
+            </button>
+            <button class="nav-item" data-page="map" type="button">
+              <span class="nav-icon">◎</span>
+              <span>Student Map</span>
+            </button>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <section id="dashboard-page" class="page-panel visible">
+          <div class="page-head">
+            <h1>Dashboard</h1>
+            <p>Overview of your distance learning program</p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="mini-card">
+              <div class="card-header">
+                <span>Total Students</span>
+                <span class="icon-box blue">👥</span>
+              </div>
+              <div class="metric">12</div>
+              <small>9 active</small>
+            </article>
+
+            <article class="mini-card">
+              <div class="card-header">
+                <span>Active Courses</span>
+                <span class="icon-box green">📖</span>
+              </div>
+              <div class="metric">7</div>
+              <small>8 total</small>
+            </article>
+
+            <article class="mini-card">
+              <div class="card-header">
+                <span>Enrollments</span>
+                <span class="icon-box purple">🎓</span>
+              </div>
+              <div class="metric">9</div>
+              <small>1 completed</small>
+            </article>
+
+            <article class="mini-card">
+              <div class="card-header">
+                <span>Assignments</span>
+                <span class="icon-box orange">📝</span>
+              </div>
+              <div class="metric">7</div>
+              <small>0 upcoming</small>
+            </article>
+          </div>
+
+          <div class="cards-grid lower-grid">
+            <article class="mini-card wide-card">
+              <div class="card-header left-align">
+                <span class="trend-icon blue">↗</span>
+                <div>
+                  <h3>Average Progress</h3>
+                  <small>Across all enrollments</small>
+                </div>
+              </div>
+              <div class="large-number">69%</div>
+              <div class="progress-bar blue-bar"><span></span></div>
+              <div class="progress-meta">
+                <div>
+                  <label>In Progress</label>
+                  <strong>8</strong>
+                </div>
+                <div>
+                  <label>Completed</label>
+                  <strong>1</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="mini-card wide-card map-card">
+              <div class="card-header left-align status-header">
+                <div class="map-badge">◎</div>
+                <div>
+                  <h3>Tupi, South Cotabato</h3>
+                </div>
+                <button class="ghost-btn" type="button" data-page-target="map">View Map</button>
+              </div>
+
+              <div class="location-chart">
+                <div class="row-line"><span>Poblacion</span><strong>10</strong><div class="track"><i style="width: 72%"></i></div></div>
+                <div class="row-line"><span>Silway Proper</span><strong>7</strong><div class="track"><i style="width: 58%"></i></div></div>
+                <div class="row-line"><span>Crossing</span><strong>7</strong><div class="track"><i style="width: 58%"></i></div></div>
+                <div class="row-line"><span>Outskirts</span><strong>11</strong><div class="track"><i style="width: 82%"></i></div></div>
+              </div>
+            </article>
+
+            <article class="mini-card wide-card">
+              <div class="card-header left-align">
+                <span class="calendar-badge">◫</span>
+                <div>
+                  <h3>Upcoming</h3>
+                  <small>Assignment deadlines</small>
+                </div>
+              </div>
+              <div class="empty-state">No upcoming deadlines</div>
+            </article>
+          </div>
+        </section>
+
+        <section id="students-page" class="page-panel hidden">
+          <div class="page-head split-head">
+            <div>
+              <h1>Students</h1>
+              <p>Manage student profiles and enrollment status</p>
+            </div>
+            <button class="primary-btn add-btn" type="button" data-open-modal="student">+ Add Student</button>
+          </div>
+          <div class="toolbar">
+            <div class="search-box">
+              <span>⌕</span>
+              <input id="student-search" type="text" placeholder="Search by name or email..." />
+            </div>
+            <select id="student-filter" class="filter-select">
+              <option value="all">All Statuses</option>
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </div>
+          <div id="students-table" class="table-wrapper"></div>
+        </section>
+
+        <section id="courses-page" class="page-panel hidden">
+          <div class="page-head split-head">
+            <div>
+              <h1>Courses</h1>
+              <p>Manage your course catalog</p>
+            </div>
+            <button class="primary-btn add-btn" type="button" data-open-modal="course">+ Add Course</button>
+          </div>
+          <div class="toolbar">
+            <div class="search-box wide-search">
+              <span>⌕</span>
+              <input id="course-search" type="text" placeholder="Search by code, title, or instructor..." />
+            </div>
+            <select id="course-filter" class="filter-select">
+              <option value="all">All Levels</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+          <div id="courses-grid" class="courses-grid"></div>
+        </section>
+
+        <section id="enrollments-page" class="page-panel hidden">
+          <div class="page-head split-head">
+            <div>
+              <h1>Enrollments</h1>
+              <p>Track student course enrollments and progress</p>
+            </div>
+            <button class="primary-btn add-btn purple-btn" type="button" data-open-modal="enrollment">+ New Enrollment</button>
+          </div>
+          <div class="toolbar">
+            <div class="search-box wide-search">
+              <span>⌕</span>
+              <input id="enrollment-search" type="text" placeholder="Search by student or course..." />
+            </div>
+            <select id="enrollment-filter" class="filter-select">
+              <option value="all">All Statuses</option>
+              <option value="Enrolled">Enrolled</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+          <div id="enrollment-table" class="table-wrapper"></div>
+        </section>
+
+        <section id="assignments-page" class="page-panel hidden">
+          <div class="page-head split-head">
+            <div>
+              <h1>Assignments &amp; Grades</h1>
+              <p>Manage assignments and record student grades</p>
+            </div>
+            <button class="primary-btn add-btn orange-btn" type="button" data-open-modal="assignment">+ Add Assignment</button>
+          </div>
+          <div class="toolbar">
+            <div class="search-box wide-search">
+              <span>⌕</span>
+              <input id="assignment-search" type="text" placeholder="Search assignments..." />
+            </div>
+            <select id="assignment-filter" class="filter-select">
+              <option value="all">All Courses</option>
+              <option value="CS101">CS101</option>
+              <option value="CS305">CS305</option>
+              <option value="MATH201">MATH201</option>
+            </select>
+          </div>
+          <div id="assignments-list" class="assignment-list"></div>
+        </section>
+
+        <section id="map-page" class="page-panel hidden">
+          <div class="page-head split-head">
+            <div>
+              <h1>Tupi Student Map</h1>
+              <p>Monitor student locations and login activity in Tupi, South Cotabato</p>
+            </div>
+            <div class="map-actions-top">
+              <button class="toggle-btn active" type="button">Street</button>
+              <button class="toggle-btn" type="button">Center Tupi</button>
+            </div>
+          </div>
+          <div class="map-tabs">
+            <button class="map-tab active" type="button">Live Logins</button>
+            <button class="map-tab" type="button">Directory</button>
+          </div>
+          <div class="stat-row">
+            <div class="map-stat-card"><span>Live Logins</span><strong>0</strong></div>
+            <div class="map-stat-card"><span>Recent (24h)</span><strong>50</strong></div>
+            <div class="map-stat-card"><span>Total Logins</span><strong>50</strong></div>
+            <div class="map-stat-card"><span>With GPS</span><strong>0</strong></div>
+          </div>
+
+          <div class="map-location-bar">
+            <span id="location-status-text">6°20'09.40"N, 124°56'51.42"E · Tupi, South Cotabato</span>
+            <button id="show-location-btn" class="primary-btn small-btn" type="button">Show My Location</button>
+          </div>
+
+          <div class="map-layout">
+            <div class="map-window">
+              <div class="map-grid"></div>
+              <div class="map-pin pin-a">A</div>
+              <div class="map-pin pin-b">B</div>
+              <div class="map-pin pin-c">C</div>
+            </div>
+            <div class="map-panel-side">
+              <div class="search-box small-box">
+                <span>⌕</span>
+                <input type="text" placeholder="Search by email..." />
+              </div>
+              <div class="log-card">
+                <div class="log-icon">◉</div>
+                <div>
+                  <h4>No login activity yet</h4>
+                  <p>Students who sign in with location sharing will appear here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="modal-root" class="modal hidden" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="modal-title">Add Item</h3>
+          <button id="close-modal" class="close-btn" type="button">×</button>
+        </div>
+        <form id="modal-form">
+          <div id="modal-fields"></div>
+          <div class="modal-actions">
+            <button type="button" class="secondary-btn" id="cancel-modal">Cancel</button>
+            <button type="submit" class="primary-btn">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
